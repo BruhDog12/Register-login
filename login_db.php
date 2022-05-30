@@ -7,12 +7,12 @@
     if (isset($_POST['login_user'])) {
         $username = mysqli_real_escape_string($conn, $_POST['username']);
         $email = mysqli_real_escape_string($conn, $_POST['email']);
-        $password_1 = mysqli_real_escape_string($conn, $_POST['password']);
+        $password = mysqli_real_escape_string($conn, $_POST['password']);
 
         if (empty($username)) {
             array_push($errors, "Username is required");
         }
-        if (empty($password_1)) {
+        if (empty($password)) {
             array_push($errors, "Password is required");
         }
 
